@@ -113,6 +113,98 @@
 				$window.trigger('scroll');
 			});
 
+		// Smooth scroll for the navigation menu and links with .scrolly classes
+		$('.more, .scrolly').on('click', function(e) {
+			var $anchor = $(this);
+			$('html, body').stop().animate({
+				scrollTop: $($anchor.attr('href')).offset().top
+			}, 1000, 'easeInOutExpo');
+			e.preventDefault();
+		});
+
+		// Activate scrollspy to add active class to navbar items on scroll
+		$('body').scrollspy({
+			target: '#nav',
+			offset: 80
+		});
+
+		// Back to top button
+		$(window).scroll(function() {
+			if ($(this).scrollTop() > 100) {
+				$('.back-to-top').fadeIn('slow');
+			} else {
+				$('.back-to-top').fadeOut('slow');
+			}
+		});
+
+		$('.back-to-top').click(function() {
+			$('html, body').animate({
+				scrollTop: 0
+			}, 1000, 'easeInOutExpo');
+			return false;
+		});
+
+		// Initialize poptrox
+		$('.thumbnails').poptrox({
+			onPopupClose: function() { $('body').removeClass('is-poptrox-visible'); },
+			onPopupOpen: function() { $('body').addClass('is-poptrox-visible'); },
+			baseZIndex: 10001,
+			useBodyOverflow: false,
+			usePopupEasyClose: true,
+			overlayColor: '#1f2328',
+			overlayOpacity: 0.95,
+			popupCloserText: '',
+			popupLoaderText: '',
+			selector: '.box:not(.videopreview) .image.fit',
+			usePopupDefaultStyling: false,
+			usePopupCaption: true,
+			usePopupCloser: true,
+			usePopupNav: true,
+			windowMargin: 50
+		});
+
+		// Handle video previews separately
+		$('.videopreview .button').on('click', function(e) {
+			e.preventDefault();
+			var videoUrl = $(this).attr('href');
+			if (videoUrl.includes('youtube')) {
+				var videoId = videoUrl.split('v=')[1];
+				var iframe = $('<iframe>', {
+					src: 'https://www.youtube.com/embed/' + videoId + '?autoplay=1',
+					frameborder: 0,
+					allowfullscreen: true,
+					width: '800',
+					height: '450'
+				});
+				$.magnificPopup.open({
+					items: {
+						src: iframe,
+						type: 'inline'
+					},
+					closeBtnInside: true
+				});
+			}
+		});
+
+		// Add parallax effect to banner
+		$(window).scroll(function() {
+			var scrolled = $(window).scrollTop();
+			$('#banner').css('background-position', 'center ' + (scrolled * 0.5) + 'px');
+		});
+
+		// Lazy load images
+		if ('loading' in HTMLImageElement.prototype) {
+			const images = document.querySelectorAll('img[loading="lazy"]');
+			images.forEach(img => {
+				img.src = img.dataset.src;
+			});
+		} else {
+			// Fallback for browsers that don't support lazy loading
+			const script = document.createElement('script');
+			script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
+			document.body.appendChild(script);
+		}
+
 	});
 
 })(jQuery);

@@ -4,16 +4,18 @@
 	templated.co @templatedco
 	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
-<html>
+<html lang="en">
 	<head>
-		<title>Krasimir Stoyanov</title>
+		<title>Krasimir Stoyanov - App Developer</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Portfolio of Krasimir Stoyanov, focusing on efficient and maintainable app development using the latest technologies." />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
 		<link rel="manifest" href="/site.webmanifest">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 	</head>
 	<body id="top">
 
@@ -23,13 +25,13 @@
 				its extension (eg. images/banner). Your video must be available in both .mp4 and .webm
 				formats to work correctly.
 			-->
-				<section id="banner" data-video="images/banner">
+				<section id="banner">
 					<div class="inner">
-						<header>
+						<header data-aos="fade-up">
 							<h1>Krasimir Stoyanov</h1>
 							<p>I focus on creating efficient and maintainable apps using the latest technologies and development practices. My background includes working with startups and leading teams, always aiming for high-quality output and innovative solutions. Outside of work, I'm passionate about outdoor activities and continuous learning in both tech and personal endeavors.</p>
 						</header>
-						<a href="#main" class="more">Learn More</a>
+						<a href="#main" class="more" data-aos="fade-up" data-aos-delay="200">View My Work</a>
 					</div>
 				</section>
 
@@ -39,8 +41,10 @@
 
 					<!-- Boxes -->
 						<div class="thumbnails">
-							<div class="box">
-								<a href="https://play.google.com/store/apps/details?id=com.ai_blue.chatvision&pli=1" class="image fit"><img src="images/chatvision.png" alt="" /></a>
+							<div class="box" data-aos="fade-up">
+								<a href="https://play.google.com/store/apps/details?id=com.ai_blue.chatvision&pli=1" class="image fit">
+									<img src="images/chatvision.png" alt="ChatVision - AI Doc Analyzer" loading="lazy" />
+								</a>
 								<div class="inner">
 									<h3>ChatVision - AI Doc Analyzer</h3>
 									<p>Designed with a keen eye for detail and a commitment to precision, ChatVision stands as a testament to the innovative use of machine learning for smart document analysis and text recognition. Leveraging the latest technologies such as CameraX and Compose within an MVVM architecture, this app delivers a seamless and intuitive user experience.</p>
@@ -167,6 +171,14 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+			<script>
+				AOS.init({
+					duration: 800,
+					once: true,
+					offset: 200
+				});
+			</script>
 
 	</body>
 </html>
