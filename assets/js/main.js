@@ -85,7 +85,10 @@
 			}
 
 		// Scrolly.
-			$('.scrolly').scrolly();
+			$('.scrolly').scrolly({
+				speed: 1000,
+				offset: 0
+			});
 
 		// Poptrox.
 			$window.on('load', function() {
@@ -112,18 +115,6 @@
 			$window.on('load', function() {
 				$window.trigger('scroll');
 			});
-
-		// Smooth scroll for the navigation menu and links with .scrolly classes
-		$('.more, .scrolly').on('click', function(e) {
-			var $anchor = $(this);
-			var target = $($anchor.attr('href'));
-			if (target.length) {
-				$('html, body').stop().animate({
-					scrollTop: target.offset().top
-				}, 1000);
-			}
-			e.preventDefault();
-		});
 
 		// Activate scrollspy to add active class to navbar items on scroll
 		$('body').scrollspy({
