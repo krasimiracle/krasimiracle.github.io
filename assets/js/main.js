@@ -116,9 +116,12 @@
 		// Smooth scroll for the navigation menu and links with .scrolly classes
 		$('.more, .scrolly').on('click', function(e) {
 			var $anchor = $(this);
-			$('html, body').stop().animate({
-				scrollTop: $($anchor.attr('href')).offset().top
-			}, 1000, 'easeInOutExpo');
+			var target = $($anchor.attr('href'));
+			if (target.length) {
+				$('html, body').stop().animate({
+					scrollTop: target.offset().top
+				}, 1000);
+			}
 			e.preventDefault();
 		});
 

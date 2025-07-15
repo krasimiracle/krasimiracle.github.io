@@ -940,24 +940,44 @@
 		-webkit-appearance: none;
 		-ms-appearance: none;
 		appearance: none;
-		-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-moz-transition: all 0.3s ease;
+		-webkit-transition: all 0.3s ease;
+		-ms-transition: all 0.3s ease;
+		transition: all 0.3s ease;
 		background-color: #70c7be;
-		border-radius: 4px;
+		border-radius: 25px;
 		border: 0;
 		color: #ffffff !important;
 		cursor: pointer;
 		display: inline-block;
-		font-weight: 400;
+		font-weight: 600;
 		height: 2.85em;
 		line-height: 2.95em;
-		padding: 0 1.5em;
+		padding: 0 2em;
 		text-align: center;
 		text-decoration: none;
 		white-space: nowrap;
+		box-shadow: 0 4px 15px rgba(112, 199, 190, 0.3);
+		position: relative;
+		overflow: hidden;
+		z-index: 1;
 	}
+
+		.button::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: -100%;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+			transition: left 0.5s;
+			z-index: -1;
+		}
+
+		.button:hover::before {
+			left: 100%;
+		}
 
 		input[type="submit"]:hover,
 		input[type="reset"]:hover,
@@ -965,6 +985,8 @@
 		button:hover,
 		.button:hover {
 			background-color: #82cec6;
+			transform: translateY(-2px);
+			box-shadow: 0 6px 20px rgba(112, 199, 190, 0.4);
 		}
 
 		input[type="submit"]:active,
@@ -973,6 +995,8 @@
 		button:active,
 		.button:active {
 			background-color: #5ec0b6;
+			transform: translateY(0);
+			box-shadow: 0 2px 10px rgba(112, 199, 190, 0.3);
 		}
 
 		input[type="submit"].icon,
@@ -997,8 +1021,9 @@
 		button.fit,
 		.button.fit {
 			display: block;
-			margin: 0 0 1em 0;
+			margin: 0 auto 1em auto;
 			width: 100%;
+			max-width: 250px;
 		}
 
 		input[type="submit"].small,
@@ -1039,6 +1064,7 @@
 		button.style2,
 		.button.style2 {
 			background-color: #7f92cf;
+			box-shadow: 0 4px 15px rgba(127, 146, 207, 0.3);
 		}
 
 			input[type="submit"].style2:hover,
@@ -1047,6 +1073,8 @@
 			button.style2:hover,
 			.button.style2:hover {
 				background-color: #92a2d6;
+				transform: translateY(-2px);
+				box-shadow: 0 6px 20px rgba(127, 146, 207, 0.4);
 			}
 
 			input[type="submit"].style2:active,
@@ -1063,6 +1091,7 @@
 		button.style3,
 		.button.style3 {
 			background-color: #9d7ed0;
+			box-shadow: 0 4px 15px rgba(157, 126, 208, 0.3);
 		}
 
 			input[type="submit"].style3:hover,
@@ -1198,18 +1227,26 @@
 
 	#banner .more {
 		display: inline-block;
-		padding: 1em 2em;
-		background: rgba(255, 255, 255, 0.1);
+		padding: 1.2em 2.5em;
+		background: rgba(255, 255, 255, 0.15);
 		border-radius: 30px;
 		color: #fff;
-		font-weight: 500;
+		font-weight: 600;
 		text-decoration: none;
 		transition: all 0.3s ease;
+		border: 2px solid rgba(255, 255, 255, 0.3);
+		letter-spacing: 1px;
+		backdrop-filter: blur(10px);
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+		position: relative;
+		overflow: hidden;
 	}
 
 	#banner .more:hover {
-		background: rgba(255, 255, 255, 0.2);
-		transform: translateY(-2px);
+		background: rgba(255, 255, 255, 0.25);
+		transform: translateY(-3px);
+		box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+		border-color: rgba(255, 255, 255, 0.5);
 	}
 
 	#banner video {
