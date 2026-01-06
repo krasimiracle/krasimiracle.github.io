@@ -1,194 +1,463 @@
 <!DOCTYPE HTML>
-<!--
-	Full Motion by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
--->
 <html lang="en">
-	<head>
-		<title>Krasimir Stoyanov - App Developer</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="description" content="Portfolio of Krasimir Stoyanov, focusing on efficient and maintainable app development using the latest technologies." />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-		<link rel="manifest" href="/site.webmanifest">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-	</head>
-	<body id="top">
 
-			<!-- Banner -->
-			<!--
-				To use a video as your background, set data-video to the name of your video without
-				its extension (eg. images/banner). Your video must be available in both .mp4 and .webm
-				formats to work correctly.
-			-->
-				<section id="banner">
-					<div class="inner">
-						<header data-aos="fade-up">
-							<h1>Krasimir Stoyanov</h1>
-							<p>I build efficient and maintainable apps with the latest technologies. With a background in startups and team leadership, I'm committed to high-quality, innovative solutions. Outside of work, I enjoy outdoor activities and continuously expanding my knowledge in tech and beyond.</p>
-						</header>
-						<a href="#main" class="more" data-aos="fade-up" data-aos-delay="200">View My Work</a>
-					</div>
-				</section>
+<head>
+    <title>Krasimir Stoyanov | Staff Engineer & KMP Architect</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-			<!-- Main -->
-				<div id="main">
-					<div class="inner">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png?v=2" />
+    <link rel="apple-touch-icon" href="images/favicon.png?v=2" />
+    <meta name="description"
+        content="Krasimir Stoyanov - Staff Android Engineer & KMP Architect. Specializing in low-level optimization, system security, and Kotlin Multiplatform architecture." />
 
-					<!-- Boxes -->
-						<div class="thumbnails">
-							<div class="box" data-aos="fade-up">
-								<a href="https://play.google.com/store/apps/details?id=com.beys.wallet&hl=en&pli=1" class="image fit">
-									<img src="images/kipmi.webp" alt="Kipmi - Digital Identity Wallet" loading="lazy" />
-								</a>
-								<div class="inner">
-									<h3>Kipmi - Digital Identity Wallet</h3>
-									<p>My latest work — a secure digital identity and document management platform for the BeYs Group. This app enables secure document storage and sharing between users and companies, with robust authentication and compliance features.</p>
-									<a href="https://play.google.com/store/apps/details?id=com.beys.wallet" class="button fit">Google Play</a>
-								</div>
-							</div>
-							<div class="box" data-aos="fade-up">
-								<a href="https://play.google.com/store/apps/details?id=com.ai_blue.chatvision&pli=1" class="image fit">
-									<img src="images/chatvision.png" alt="ChatVision - AI Doc Analyzer" loading="lazy" />
-								</a>
-								<div class="inner">
-									<h3>ChatVision - AI Doc Analyzer</h3>
-									<p>ChatVision showcases my expertise in machine learning for document analysis and text recognition. I used CameraX and Compose within an MVVM architecture to create a seamless and intuitive user experience.</p>
-									<a href="https://play.google.com/store/apps/details?id=com.ai_blue.chatvision&pli=1" class="button fit">Google Play</a>
-								</div>
-							</div>
-							<div class="box">
-								<a href="https://play.google.com/store/apps/details?id=com.eterg.passiveincome" class="image fit"><img src="images/passive.png" alt="" /></a>
-								<div class="inner">
-									<h3>Passive Wealth Builder</h3>
-									<p>Developed using clean architecture, this app features a highly polished UI with animations. It fully implements Material 3 design principles, including modern typography, to deliver a robust, user-friendly, and visually appealing experience.</p>
-									<a href="https://play.google.com/store/apps/details?id=com.eterg.passiveincome" class="button fit">Google Play</a>
-								</div>
-							</div>
-							<div class="box">
-								<a href="https://play.google.com/store/apps/details?id=bg.ozone.ozonereader" class="image fit"><img src="images/ozonebg.jpeg" alt="" /></a>
-								<div class="inner">
-									<h3>Ozone Reader</h3>
-									<p>I had the privilege to create the Ozone Reader app, integrating clean architecture and modern Android practices such as MVVM, Room, and Data Binding, to craft a user-friendly reading experience.</p>
-									<a href="https://play.google.com/store/apps/details?id=bg.ozone.ozonereader" class="button fit">Google Play</a>
-								</div>
-							</div>
-							<div class="box">
-								<a href="" class="image fit"><img src="images/warehouse.jpeg" alt="" /></a>
-								<div class="inner">
-									<h3>Ozone Warehouse Management App for Zebra Devices</h3>
-									<p>I spearheaded the redesign and advancement of the internal warehouse application, tailoring it for the high-performance Zebra scanner devices. My efforts streamlined inventory management, leading to a measurable decrease in human error and a surge in throughput, which was critical during our strategic warehouse relocation.</p>
-								</div>
-							</div>
-							<div class="box">
-								<a href="" class="image fit"><img src="images/fleet.jpeg" alt="" /></a>
-								<div class="inner">
-									<h3>Ozone Courier Fleet Management App</h3>
-									<p>In my role at Ozone.bg, I substantially enhanced our courier operations by refining the internal courier app. I integrated Android Auto functionalities to ensure safer and more efficient routes for our fleet. My improvements resulted in optimized workflows, significantly elevating job satisfaction and operational performance.</p>
-								</div>
-							</div>
+    <!-- Original Assets (Keeping for baseline resets/icons) -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- New V2 Styles (Overrides) -->
+    <link rel="stylesheet" href="assets/css/v2.css" />
 
-							<div class="box">
-								<a href="https://play.google.com/store/apps/details?id=com.stoyanov.foodsnap" class="image fit"><img src="images/foodsnapimg.png" alt="" /></a>
-								<div class="inner">
-									<h3>FoodSnap - Food Identifier</h3>
-									<p>Innovatively coded using Jetpack Compose alongside ML Kit, FoodSnap is an app that allows users to identify various food items through image recognition, demonstrating my ability to integrate AI in practical, user-centric applications.</p>
-									<a href="https://play.google.com/store/apps/details?id=com.stoyanov.foodsnap" class="button fit">Google Play</a>
-								</div>
-							</div>
-							<div class="box">
-								<a href="https://play.google.com/store/apps/details?id=com.ai_blue.pomodoro" class="image fit"><img src="images/pomodoroforyoupromo.png" alt="" /></a>
-								<div class="inner">
-									<h3>Pomodoro For You</h3>
-									<p>A time management app with engaging animations using Jetpack Compose.</p>
-									<a href="https://play.google.com/store/apps/details?id=com.ai_blue.pomodoro" class="button fit">Google Play</a>
-								</div>
-							</div>
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://krasimiracle.github.io/">
+    <meta property="og:title" content="Krasimir Stoyanov - Staff Engineer & KMP Architect">
+    <meta property="og:description"
+        content="Specializing in scalable Kotlin Multiplatform ecosystems and high-performance mobile architectures.">
+    <meta property="og:image" content="images/banner.jpg">
 
-							<div class="box">
-								<a href="https://play.google.com/store/apps/details?id=com.jokeswhale.app" class="image fit"><img src="images/customize.png" alt="" /></a>
-								<div class="inner">
-									<h3>Jokes Whale</h3>
-									<p>Crafted with the intent to bring joy, Jokes Whale is a blend of clean design and seamless performance.</p>
-									<a href="https://play.google.com/store/apps/details?id=com.jokeswhale.app" class="button fit">Google Play</a>
-								</div>
-							</div>
-							<div class="box">
-								<a href="https://www.racingpost.com/mobile/" class="image fit"><img src="images/racingpost.png" alt="" /></a>
-								<div class="inner">
-									<h3>Racing Post mobile app</h3>
-									<p>As a member of the development team, I contributed to the integration of the latest API version, enhancing the app's functionality and user experience. Our collaborative efforts facilitated a smooth migration to the Google Play Store, where we implemented a series of performance and feature improvements, significantly elevating the app's overall quality and user satisfaction. </p>
-									<a href="https://www.racingpost.com/mobile/" class="button style2 fit">Website</a>
-								</div>
-							</div>
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://krasimiracle.github.io/">
+    <meta property="twitter:title" content="Krasimir Stoyanov - Staff Engineer & KMP Architect">
+    <meta property="twitter:description"
+        content="Specializing in scalable Kotlin Multiplatform ecosystems and high-performance mobile architectures.">
+    <meta property="twitter:image" content="images/banner.jpg">
 
-							<div class="box">
-								<a href="https://play.google.com/store/apps/details?id=com.stoyanov5.travel" class="image fit"><img src="images/paris.png" alt="" /></a>
-								<div class="inner">
-									<h3>Paris Top Spots</h3>
-									<p>Part of a larger initiative, this app guides users through the enchanting streets of Paris. </p>
-									<a href="https://play.google.com/store/apps/details?id=com.stoyanov5.travel" class="button style2 fit">Google Play</a>
-								</div>
-							</div>
-							<div class="box">
-								<a href="https://github.com/kstoyanov5/TallyCounter" class="image fit"><img src="images/pic05.png" alt="" /></a>
-								<div class="inner">
-									<h3>Tally counter</h3>
-									<p>A simple tally counter which is implemented by using the Model-view presenter architecture, a Room database, and threading for saving and loading the data.</p>
-									<a href="https://github.com/kstoyanov5/TallyCounter" class="button style3 fit">Github</a>
-								</div>
-							</div>
-							<div class="box videopreview">
-								<a href="https://youtu.be/8wStFspB53M" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-								<div class="inner">
-									<h3>Archer Attack</h3>
-									<p>This cross-platform game, built using the libGDX framework and Box2D, is a playful venture into the realm of physics-based entertainment. My role in its development was to create an enjoyable and technically sound gaming experience.</p>
-									<a href="https://youtu.be/8wStFspB53M" class="button style3 fit" data-poptrox="youtube,800x400">Watch</a>
-									<a href="https://play.google.com/store/apps/details?id=com.potatogamesstudio.archerattack" class="button style3 fit">Google Play</a>
-								</div>
-							</div>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+</head>
 
-							<div class="box">
-								<a href="" class="image fit"><img src="images/pic06.png" alt="" /></a>
-								<div class="inner">
-									<h3>Pacman search</h3>
-									<p>Trained an AI agent to play the game of Pacman. Implemented depth-first, breadth-first and A* searches. Coded in Python.</p>
-									<a href="https://github.com/kstoyanov5/Pacman-ML" class="button fit">Github</a>
-								</div>
-							</div>
+<body id="top" class="v2-layout">
 
-						</div>
+    <!-- Sticky Nav -->
+    <nav id="sticky-nav">
+        <ul>
+            <li><a href="#kmp-workspace">Architecture</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="https://github.com/krasimiracle" target="_blank">GitHub</a></li>
+        </ul>
+    </nav>
 
-					</div>
-				</div>
+    <!-- Hero Section -->
+    <section id="hero" class="v2-hero">
+        <div class="inner">
+            <header data-aos="fade-up">
+                <span class="role-badge">Staff Engineer & KMP Architect</span>
+                <h1>Krasimir Stoyanov</h1>
+                <p class="hero-bio">
+                    Specializing in complex system architecture and efficiency.<br>
+                    Currently building a scalable <strong>Kotlin Multiplatform</strong> ecosystem and <br>optimizing
+                    heavy-duty mobile applications.
+                </p>
+            </header>
+        </div>
+        <a href="#main" class="scroll-down-indicator" aria-label="Scroll Down">
+            <span class="chevron"></span>
+        </a>
+    </section>
 
-			<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<!-- Inspirational Quote -->
-					<p>"Learning and innovation go hand in hand. The arrogance of success is to think that what you did yesterday will be sufficient for tomorrow." - William Pollard, physicist.</p>
-				</div>
-			</footer>
+    <!-- Main Content -->
+    <div id="main">
+        <div class="inner">
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-			<script>
-				AOS.init({
-					duration: 800,
-					once: true,
-					offset: 200
-				});
-			</script>
+            <!-- Section: The "Big Three" Focus Areas -->
+            <section class="v2-pillars">
 
-	</body>
+                <!-- Pillar 1: KMP Workspace -->
+                <div id="kmp-workspace" class="pillar-card kmp-card" data-aos="fade-up">
+                    <div class="content">
+                        <header>
+                            <span class="pillar-tag">System Architecture</span>
+                            <h2>KMP Workspace</h2>
+                            <h3>Values: Scalability, Code Reuse, DX</h3>
+                        </header>
+                        <div class="description">
+                            <p>
+                                A proprietary <strong>modular Kotlin Multiplatform ecosystem</strong> designed to spawn
+                                distinct Android & iOS apps from a single monorepo.
+                            </p>
+                            <ul class="feature-list">
+                                <li><strong>App Factory:</strong> Custom CLI tooling to generate new projects in
+                                    seconds.</li>
+                                <li><strong>Shared Foundation:</strong> Reusable libraries for AI Inference, Analytics,
+                                    and Design Systems.</li>
+                                <li><strong>Platform Scale:</strong> "Write once, spawn everywhere" architecture.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="visual kmp-visual">
+                        <!-- Ideally this is a mermaid diagram or a nice SVG illustration of the architecture -->
+                        <div class="architecture-diagram">
+                            <div class="node mono">Monorepo</div>
+                            <div class="lines">
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                            </div>
+                            <div class="app-nodes">
+                                <div class="node app">Android App</div>
+                                <div class="node app">iOS App</div>
+                                <div class="node app cli">CLI Tool</div>
+                            </div>
+                        </div>
+                        <div class="spawned-apps-container">
+                            <span class="label">Spawned Apps</span>
+                            <div class="terminal-output">
+                                <span class="typing-text">Initializing KMP Factory...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pillar 2: Scale & Impact (TINQIN / Ozone) -->
+                <div class="pillar-card impact-card" data-aos="fade-up">
+                    <div class="visual impact-visual">
+                        <!-- Placeholder for Impact Visuals or Logos -->
+                        <div class="stat-box">
+                            <span class="stat-number">30%</span>
+                            <span class="stat-desc">Startup Time Reduction</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">100k+</span>
+                            <span class="stat-desc">SKUs Managed</span>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <header>
+                            <span class="pillar-tag">Engineering at Scale</span>
+                            <h2>Enterprise Impact</h2>
+                        </header>
+                        <div class="description ecosystem-layout">
+
+                            <!-- TINQIN Group -->
+                            <div class="ecosystem-group">
+                                <h4>TINQIN (Digital Identity)</h4>
+                                <ul class="feature-list dense">
+                                    <li>
+                                        <strong>Kipmi Wallet:</strong> Achieved <strong>30% startup time
+                                            reduction</strong> via Baseline Profiles.
+                                    </li>
+                                    <li>
+                                        <strong>Security:</strong> Hardened EUDI compliance with Tapjacking defenses &
+                                        Encrypted Storage.
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Ozone Group -->
+                            <div class="ecosystem-group">
+                                <h4>Ozone (Logistics Suite)</h4>
+                                <ul class="feature-list dense">
+                                    <li>
+                                        <strong>Warehouse App:</strong> Optimized for <strong>Zebra TC8300</strong>
+                                        hardware to manage 100k+ SKUs.
+                                    </li>
+                                    <li>
+                                        <strong>Courier Fleet:</strong> Applied <strong>Android Auto</strong> UI/UX
+                                        guidelines for driver workflow efficiency.
+                                    </li>
+                                    <li>
+                                        <strong>Ozone Reader:</strong> Built e-book reader with custom pagination
+                                        for EPUB/PDF reflow on low-end devices.
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pillar 3: Engineering Craft (Telegram) -->
+                <div class="pillar-card craft-card" data-aos="fade-up">
+                    <div class="content">
+                        <header>
+                            <span class="pillar-tag">High-Fidelity Engineering</span>
+                            <h2>Telegram Contest</h2>
+                            <h3>3rd Place Winner</h3>
+                        </header>
+                        <div class="description">
+                            <p>
+                                <strong>Reverse Engineered</strong> complex UI specs to build a pure-native rendering
+                                engine.
+                                Achieved 60fps animations on mid-range devices under strict contest constraints.
+                            </p>
+                            <div class="contest-actions">
+                                <a href="https://github.com/krasimiracle/telegram-contest/tree/android-contest-profile-redesign-krasimir"
+                                    target="_blank" class="button small icon fa-github">Source Code</a>
+                                <a href="#" onclick="openProofModal(); return false;"
+                                    class="button small icon fa-trophy">Judge's Feedback</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="visual video-visual">
+                        <!-- Re-using the logic from the old "Archer" box but styled for this context -->
+                        <!-- Placeholder for the local video -->
+                        <!-- Live Video Preview -->
+                        <div class="device-frame video-frame">
+                            <div class="notch"></div>
+                            <video src="images/telegramrecording.mp4" autoplay muted loop playsinline></video>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Section: Selected Projects Grid -->
+            <section id="projects" class="v2-grid">
+                <header class="grid-header" data-aos="fade-up">
+                    <h2>Selected Projects</h2>
+                </header>
+                <div class="v2-features-layout">
+
+                    <!-- 01: Kipmi (Rows 1: Image Left) -->
+                    <article class="feature-row" data-aos="fade-up">
+                        <div class="feature-visual">
+                            <div class="device-wrapper">
+                                <div class="device-frame">
+                                    <img src="images/kipmi.webp" alt="Kipmi Digital Identity" loading="lazy" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-content">
+                            <header>
+                                <span class="feature-number">01</span>
+                                <h3>Kipmi Wallet</h3>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">Security</span>
+                                    <span class="tech-badge">EUDI Compliant</span>
+                                    <span class="tech-badge">Baseline Profiles</span>
+                                </div>
+                            </header>
+                            <p>
+                                A secure digital identity platform for the BeYs Group.
+                                <strong>Hardened security</strong> against tapjacking and memory dumps.
+                                Achieved <strong>30% faster startup</strong> times via Baseline Profiles for critical
+                                user sessions.
+                            </p>
+                            <a href="https://play.google.com/store/apps/details?id=com.beys.wallet&hl=en&pli=1"
+                                target="_blank" class="text-link">View on Google Play &rarr;</a>
+                        </div>
+                    </article>
+
+                    <!-- 02: ChatVision (Row 2: Image Right) -->
+                    <article class="feature-row alt" data-aos="fade-up">
+                        <div class="feature-content">
+                            <header>
+                                <span class="feature-number">02</span>
+                                <h3>ChatVision</h3>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">ML Kit</span>
+                                    <span class="tech-badge">CameraX</span>
+                                    <span class="tech-badge">MVVM</span>
+                                </div>
+                            </header>
+                            <p>
+                                A high-precision document analysis engine built for speed.
+                                Leverages <strong>on-device Machine Learning</strong> to detect edges and extract text
+                                in real-time.
+                                Designed with a clean MVVM architecture to handle complex CameraX lifecycles seamlessly.
+                            </p>
+                            <span class="text-link disabled">Previously on Google Play · Account migration in
+                                progress</span>
+                        </div>
+                        <div class="feature-visual">
+                            <div class="device-wrapper">
+                                <div class="device-frame">
+                                    <img src="images/chatvision.png" alt="ChatVision App Interface" loading="lazy" />
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 03: Passive Wealth (Row 3: Image Left) -->
+                    <article class="feature-row" data-aos="fade-up">
+                        <div class="feature-visual">
+                            <div class="device-wrapper">
+                                <div class="device-frame tall-frame">
+                                    <img src="images/passive.png" alt="Passive Wealth Interface" loading="lazy" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-content">
+                            <header>
+                                <span class="feature-number">03</span>
+                                <h3>Passive Wealth</h3>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">Clean Architecture</span>
+                                    <span class="tech-badge">Room</span>
+                                    <span class="tech-badge">Offline-First</span>
+                                </div>
+                            </header>
+                            <p>
+                                A comprehensive financial tracker built with strict <strong>Clean Architecture</strong>.
+                                Features a custom graph rendering engine and seamless offline-first synchronization
+                                using
+                                Room logic.
+                            </p>
+                            <span class="text-link disabled">Previously on Google Play · Account migration in
+                                progress</span>
+                        </div>
+                    </article>
+
+                    <!-- 04: Ozone Reader (Row 4: Image Right) -->
+                    <article class="feature-row alt" data-aos="fade-up">
+                        <div class="feature-content">
+                            <header>
+                                <span class="feature-number">04</span>
+                                <h3>Ozone Reader</h3>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">EPUB/PDF</span>
+                                    <span class="tech-badge">Data Binding</span>
+                                    <span class="tech-badge">Pagination</span>
+                                </div>
+                            </header>
+                            <p>
+                                Built the e-book reader for Bulgaria's largest online bookstore.
+                                Full ownership from architecture to pre-release.
+                            </p>
+                            <a href="https://play.google.com/store/apps/details?id=bg.ozone.ozonereader" target="_blank"
+                                class="text-link">View on Google Play &rarr;</a>
+                        </div>
+                        <div class="feature-visual">
+                            <div class="device-wrapper">
+                                <div class="device-frame">
+                                    <img src="images/ozonereadernew.png" alt="Ozone Reader Interface" loading="lazy" />
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 05: FoodSnap (Row 5: Image Left) -->
+                    <article class="feature-row" data-aos="fade-up">
+                        <div class="feature-visual">
+                            <div class="device-wrapper">
+                                <div class="device-frame">
+                                    <img src="images/foodsnapimg.png" alt="FoodSnap Interface" loading="lazy" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-content">
+                            <header>
+                                <span class="feature-number">05</span>
+                                <h3>FoodSnap</h3>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">Jetpack Compose</span>
+                                    <span class="tech-badge">TensorFlow</span>
+                                </div>
+                            </header>
+                            <p>
+                                Instant food identification using <strong>TensorFlow Lite</strong>.
+                                Built entirely with <strong>Jetpack Compose</strong> for a fluid, reactive UI.
+                                Optimizes heavy model inference on background threads.
+                            </p>
+                            <span class="text-link disabled">Previously on Google Play · Account migration in
+                                progress</span>
+                        </div>
+                    </article>
+
+                    <!-- 06: Racing Post (Row 6: Image Right) -->
+                    <article class="feature-row alt" data-aos="fade-up">
+                        <div class="feature-visual">
+                            <div class="device-wrapper">
+                                <div class="device-frame">
+                                    <img src="images/racingpost.png" alt="Racing Post Interface" loading="lazy" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-content">
+                            <header>
+                                <span class="feature-number">06</span>
+                                <h3>Racing Post</h3>
+                                <div class="tech-stack">
+                                    <span class="tech-badge">High Traffic</span>
+                                    <span class="tech-badge">Legacy Migration</span>
+                                    <span class="tech-badge">Performance</span>
+                                </div>
+                            </header>
+                            <p>
+                                Handled the <strong>legacy migration</strong> and API integration for a high-traffic
+                                sports app.
+                                Improved app stability and user retention during the critical Google Play Store
+                                transition.
+                            </p>
+                            <a href="https://www.racingpost.com/mobile/" target="_blank" class="text-link">View Website
+                                &rarr;</a>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <ul class="icons">
+                <li><a href="https://github.com/krasimiracle" class="icon fa-github"><span
+                            class="label">Github</span></a>
+                </li>
+            </ul>
+            <p class="copyright">&copy; Krasimir Stoyanov.</p>
+        </div>
+    </footer>
+
+    <!-- Proof Modal -->
+    <div id="proof-modal" class="modal-overlay" onclick="closeProofModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close-modal" onclick="closeProofModal()">&times;</span>
+            <h3>Contest Judge Feedback</h3>
+            <img src="images/telegram-proof.png" alt="Telegram Contest Feedback" />
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.poptrox.min.js"></script> <!-- Keep for legacy potential -->
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 200
+        });
+
+        // Modal Logic
+        function openProofModal() {
+            document.getElementById('proof-modal').classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+        }
+
+        function closeProofModal() {
+            document.getElementById('proof-modal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close on Escape key
+        document.addEventListener('keydown', function (event) {
+            if (event.key === "Escape") {
+                closeProofModal();
+            }
+        });
+    </script>
+</body>
+
 </html>
